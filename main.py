@@ -6,11 +6,7 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 
-from server import server_on
-
-token = os.getenv('TOKEN')
-if token is None:
-    raise ValueError("TOKEN environment variable is not set. Please set the TOKEN before running the bot.")
+from alive import server_on
 
 intents = discord.Intents.default()
 intents.members = True
