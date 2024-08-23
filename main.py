@@ -146,7 +146,7 @@ async def on_ready():
     )
     await bot.change_presence(activity=streaming_activity)
 
-server_on
+server_on()
 
 
 bot.run(os.getenv('TOKEN'))
