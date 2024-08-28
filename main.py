@@ -117,7 +117,7 @@ async def on_member_remove(member):
             leave_image = await create_welcome_image(
                 profile_image_bytes, 
                 member.name, 
-                "Sayanara", 
+                "Sayonara", 
                 background_url,
                 
             )
@@ -125,7 +125,7 @@ async def on_member_remove(member):
                 leave_image.save(buf, format='PNG')
                 buf.seek(0)
                 file = discord.File(fp=buf, filename='sayanara.png')
-                await channel.send(f'sayanara {member.mention} We have {len(member.guild.members) - 1} member left.', file=file)
+                await channel.send(f'sayonara {member.mention} We have {len(member.guild.members) - 1} member left.', file=file)
 
 
 @bot.tree.command(name="say", description="Send a text image")
